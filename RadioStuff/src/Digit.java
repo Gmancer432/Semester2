@@ -1,9 +1,9 @@
 import javax.swing.JComponent;
 
 public class Digit extends JComponent{
-    private int widthH;
-    private int lengthH;
-    private int widthV;
+    private int widthH; //width is defined as the short side of the rectangle
+    private int lengthH;//length is the long side of the rectangle
+    private int widthV;//H is for Horizontal, and V is for Vertical
     private int lengthV;
 
     private Rectangle top;
@@ -30,13 +30,13 @@ public class Digit extends JComponent{
         add(topLeft);
         topRight = new Rectangle(widthV*4, widthH, widthV, lengthV);
         add(topRight);
-        middle = new Rectangle(25, 100, 75, 25);
+        middle = new Rectangle(widthV, widthH*4, lengthH, widthH);
         add(middle);
-        bottomLeft = new Rectangle(0, 125, 25, 75);
+        bottomLeft = new Rectangle(0, widthH*5, widthV, lengthV);
         add(bottomLeft);
-        bottomRight = new Rectangle(100, 125, 25, 75);
+        bottomRight = new Rectangle(widthV*4, widthH*5, widthV, lengthV);
         add(bottomRight);
-        bottom = new Rectangle(25, 200, 75, 25);
+        bottom = new Rectangle(widthV, widthH*8, lengthH, widthH);
         add(bottom);
     }
 }
