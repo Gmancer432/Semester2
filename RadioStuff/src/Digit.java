@@ -30,13 +30,37 @@ public class Digit extends JComponent{
         add(topLeft);
         topRight = new Rectangle(widthV*4, widthH, widthV, lengthV);
         add(topRight);
-        middle = new Rectangle(25, 100, 75, 25);
+        middle = new Rectangle(widthV, widthH*4, lengthH, widthH);
         add(middle);
-        bottomLeft = new Rectangle(0, 125, 25, 75);
+        bottomLeft = new Rectangle(0, widthH*5, widthV, lengthV);
         add(bottomLeft);
-        bottomRight = new Rectangle(100, 125, 25, 75);
+        bottomRight = new Rectangle(widthV*4, widthH*5, widthV, lengthV);
         add(bottomRight);
-        bottom = new Rectangle(25, 200, 75, 25);
+        bottom = new Rectangle(widthV, widthH*8, lengthH, widthH);
         add(bottom);
+    }
+
+    protected void showAll()
+    {
+        top.setVisible(true);
+        topLeft.setVisible(true);
+        topRight.setVisible(true);
+        middle.setVisible(true);
+        bottomLeft.setVisible(true);
+        bottomRight.setVisible(true);
+        bottom.setVisible(false);
+        repaint();
+    }
+
+    protected void hideAll()
+    {
+        top.setVisible(false);
+        topLeft.setVisible(false);
+        topRight.setVisible(false);
+        middle.setVisible(false);
+        bottomLeft.setVisible(false);
+        bottomRight.setVisible(false);
+        bottom.setVisible(false);
+        repaint();
     }
 }
