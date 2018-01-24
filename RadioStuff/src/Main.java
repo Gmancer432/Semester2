@@ -10,7 +10,7 @@ public class Main {
         Number[] nums = new Number[10];
         int w = 100;//width
         int h = 166;//height
-        int s = 10;// space
+        int s = 10;//space in between numbers
         int i = 0;
         for(; i<nums.length; i++) {
             nums[i] = new Number(s + i * (w + s), s, w, h, i);
