@@ -8,7 +8,12 @@ public class Main {
         win.setLayout(null);
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        win.add(new Digit(win.getWidth()/2, 10, 50, 80));
+        Number[] nums = new Number[10];
+        int w = 100;
+        int h = 166;
+        for(int i = 0; i<nums.length; i++) {
+            nums[i] = new Number(i * (w + 10), 50, w, h);
+        }
 
         win.setVisible(true);
     }

@@ -39,4 +39,28 @@ public class Digit extends JComponent{
         bottom = new Rectangle(widthV, widthH*8, lengthH, widthH);
         add(bottom);
     }
+
+    protected void showAll()
+    {
+        top.setVisible(true);
+        topLeft.setVisible(true);
+        topRight.setVisible(true);
+        middle.setVisible(true);
+        bottomLeft.setVisible(true);
+        bottomRight.setVisible(true);
+        bottom.setVisible(false);
+        repaint();
+    }
+
+    protected void hideAll()
+    {
+        top.setVisible(false);
+        topLeft.setVisible(false);
+        topRight.setVisible(false);
+        middle.setVisible(false);
+        bottomLeft.setVisible(false);
+        bottomRight.setVisible(false);
+        bottom.setVisible(false);
+        repaint();
+    }
 }
