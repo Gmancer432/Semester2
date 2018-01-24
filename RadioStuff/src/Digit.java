@@ -6,13 +6,13 @@ public class Digit extends JComponent{
     private int widthV;//H is for Horizontal, and V is for Vertical
     private int lengthV;
 
-    private Rectangle top;
-    private Rectangle topLeft;
-    private Rectangle topRight;
-    private Rectangle middle;
-    private Rectangle bottomLeft;
-    private Rectangle bottomRight;
-    private Rectangle bottom;
+    protected Rectangle top;
+    protected Rectangle topLeft;
+    protected Rectangle topRight;
+    protected Rectangle middle;
+    protected Rectangle bottomLeft;
+    protected Rectangle bottomRight;
+    protected Rectangle bottom;
 
     public Digit(int x, int y, int w, int h)
     {
@@ -40,7 +40,7 @@ public class Digit extends JComponent{
         add(bottom);
     }
 
-    protected void showAll()
+    public void showAll()
     {
         top.setVisible(true);
         topLeft.setVisible(true);
@@ -48,11 +48,11 @@ public class Digit extends JComponent{
         middle.setVisible(true);
         bottomLeft.setVisible(true);
         bottomRight.setVisible(true);
-        bottom.setVisible(false);
+        bottom.setVisible(true);
         repaint();
     }
 
-    protected void hideAll()
+    public void hideAll()
     {
         top.setVisible(false);
         topLeft.setVisible(false);
