@@ -20,5 +20,7 @@ public class Main {
         win.setSize(s*2+i*(w+s), h+2*s+30);
         win.setLocationRelativeTo(null);
         win.setVisible(true);
+
+        nums[1].equals(null);
     }
 }

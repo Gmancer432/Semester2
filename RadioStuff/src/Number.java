@@ -1,6 +1,7 @@
 public class Number extends Digit{
 
-    private int number;
+    private int value;
+
     public Number(int x, int y, int w, int h, int n)
     {
         super(x,y,w,h);
@@ -9,7 +10,7 @@ public class Number extends Digit{
 
     public void setNumber(int n)
     {
-        number = n;
+        value = n;
         switch(n)
         {
             case 0:
@@ -63,5 +64,16 @@ public class Number extends Digit{
                 System.out.println(n + " is an invalid number!");
                 break;
         }
+    }
+
+    public int getValue()
+    {
+        return value;
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        return o!= null && o instanceof Number && ((Number) o).getValue()==value;
     }
 }
