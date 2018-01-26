@@ -1,4 +1,5 @@
 import javax.swing.JComponent;
+import java.awt.*;
 
 public class Digit extends JComponent{
     private int widthH; //width is defined as the short side of the rectangle
@@ -13,6 +14,8 @@ public class Digit extends JComponent{
     protected Rectangle bottomLeft;
     protected Rectangle bottomRight;
     protected Rectangle bottom;
+
+    protected Color c;
 
     public Digit(int x, int y, int w, int h)
     {
@@ -61,6 +64,19 @@ public class Digit extends JComponent{
         bottomLeft.setVisible(false);
         bottomRight.setVisible(false);
         bottom.setVisible(false);
+        repaint();
+    }
+
+    public void setColor(Color c)
+    {
+        this.c = c;
+        top.setBackground(c);
+        topLeft.setBackground(c);
+        topRight.setBackground(c);
+        middle.setBackground(c);
+        bottomLeft.setBackground(c);
+        bottomRight.setBackground(c);
+        bottom.setBackground(c);
         repaint();
     }
 }
